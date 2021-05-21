@@ -20,13 +20,7 @@ end
 def valid_move?(board, index)
   #return true if index is within 0-8
   if index.between?(0, 8)
-    #define position_taken? and pass
-    #see if position filled or not
-    if position_taken?(board,index)
-      TRUE
-    else
-      FALSE
-    end
+   
   end
 end
 

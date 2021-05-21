@@ -43,6 +43,8 @@ def turn(board)
   index = gets.strip
   converted_input = input_to_index(index)
   if valid_move?(board,converted_input)
-    puts converted_input
+    move(board, converted_input)
+  else
+    turn(board)
   end
 end

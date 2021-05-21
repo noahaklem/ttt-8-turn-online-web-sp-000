@@ -17,7 +17,7 @@ def position_taken?(board, index)
   if board[index] == " "
     true
   else
-    FALSE
+    false
   end
 end
 
@@ -28,6 +28,11 @@ def valid_move?(board, index)
       true
     end
   end
+end
+
+def move(board, index, token = "X")
+  #place the token at the correct index value on the board 
+  board[index] = token
 end
 
 

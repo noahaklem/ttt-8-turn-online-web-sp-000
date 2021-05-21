@@ -27,5 +27,6 @@ def valid_move?(board, index)
 end
 
 def position_taken?(board, index)
+  index = index.to_i -1
   board[index] == " "
 end

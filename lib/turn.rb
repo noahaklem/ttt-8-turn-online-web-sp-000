@@ -10,7 +10,8 @@ end
 def input_to_index(user_input)
   #converts user_input to integer
   #subtracts 1
-  user_input.to_i - 1
+  user_input = user_input.to_i
+  converted_input = user_input - 1
 end
 
 def position_taken?(board, index)

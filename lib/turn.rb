@@ -8,13 +8,17 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-  #converts user_input to integer then subtracts 1
+  #converts user_input to integer
+  #subtracts 1
   user_input.to_i - 1
+end
+
+def position_taken?(board, index)
+  board[index] == " "
 end
 
 def valid_move?(board, index)
   #return true if index is within 0-8
-  index = index.to_i - 1
   if index.between?(0, 8)
     #define position_taken? and pass
     #see if position filled or not
@@ -26,7 +30,4 @@ def valid_move?(board, index)
   end
 end
 
-def position_taken?(board, index)
-  index = index.to_i -1
-  board[index] == " "
-end
+

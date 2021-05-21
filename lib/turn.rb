@@ -14,14 +14,18 @@ def input_to_index(user_input)
 end
 
 def position_taken?(board, index)
-  board[index] == " "
+  if board[index] == " "
+    true
+  else
+    FALSE
+  end
 end
 
 def valid_move?(board, index)
   #return true if index is within 0-8
   if index.between?(0, 8)
-    
-   
+    if position_take?(board, index)
+    end
   end
 end
 

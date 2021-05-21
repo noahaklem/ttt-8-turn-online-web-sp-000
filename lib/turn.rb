@@ -15,6 +15,8 @@ def input_to_index(user_input)
 end
 
 def position_taken?(board, index)
+  #checks to see if index is empty in board
+  #spec shows the tests only using " " no other variations
   if board[index] == " "
     true
   else
@@ -39,13 +41,20 @@ def move(board, index, token = "X")
 end
 
 def turn(board)
+  #ask user for input
   puts "Please enter 1-9:"
+  #get input and make it valid using strip
   index = gets.strip
+  #convert input to usable input
   converted_input = input_to_index(index)
+  #if the move is valid
   if valid_move?(board,converted_input)
+    #make the move
     move(board, converted_input)
   else
+    #if not recurision or start this method over again
     turn(board)
   end
+  #display the updated board
   display_board(board)
 end
